@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #000000;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto; /* Garante que a imagem mantenha a proporção */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container__left,
+.container__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.container__left {
+  background-color: var(--secondary-color);
+  justify-content: flex-end;
+}
+
+.nav__logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--extra-light);
+}
+
+.content {
+  max-width: 600px;
+  padding: 2rem;
+  padding-top: 5rem;
+  flex: 1;
+  color: var(--extra-light);
+  display: grid;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 4rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 500px;
+}
+
+.action__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.portfolio {
+  background-color: var(--extra-light);
+}
+
+.cv {
+  color: var(--text-light);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.cv:hover {
+  color: var(--extra-light);
+}
+
+.nav__links {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.link {
+  padding: 0 0.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: var(--extra-light);
+}
+
+.image {
+  max-width: 600px;
+  padding: 2rem;
+  padding-top: 5rem;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.image img {
+  max-width: 400px;
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.image__content {
+  color: var(--extra-light);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.image__content h4 {
+  background-color: var(--extra-light);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.image__content p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column-reverse;
+  }
+
+  .container__left,
+  .container__right {
+    justify-content: center;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .action__btns {
+    justify-content: center;
+  }
+}
+
+#sobreALogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#sobreALogan #content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#sobreALogan #content #contentText {
+  width: 50%;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+#sobreALogan #content #contentText span {
+  color: #757575;
+  font-weight: bold;
+}
+
+#sobreALogan .titles {
+  margin: 40px 0 20px 0;
+  border-bottom: 5px solid #9333EA;
+  width: fit-content;
+  font-size: 32px;
+}
+
+#sobreALogan .subTitle,
+#sobreALogan #content #contentText #subTitle {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#cardsValor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.valores {
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  height: 320px;
+  width: 250px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Evita que o conteúdo ultrapasse os limites da div */
+}
+
+.valores img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+}
+
+.valores h2 {
+  margin-bottom: 15px;
+  text-align: center; /* Garante que o título esteja centralizado */
+}
+
+.valores p {
+  text-align: center;
+  color: #757575;
+  font-weight: bold;
+  margin: 0; /* Remove margens extras que podem causar overflow */
+}
+
+#footer {
+  background-color: #9333EA;
+  height: fit-content;
+  padding: 40px;
+}
+
+#footer .containerFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+#subtitleFooter {
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#subtitleFooter p {
+  font-size: 32px;
+}
+
+#footer .containerFooter #buttonUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+#footer .footerList #footerUL {
+  margin-top: 30px;
+}
+
+#footer .footerList #footerUL .footerList {
+  color: #ffffff;
+  list-style: none;
+  font-weight: 500;
+  margin: 10px 0;
+  font-size: 18px;
+  border-top: 2px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+#footer .footerList #footerUL .footerList .listMenuFooter .listMenu {
+  display: none;
+}
+
+.arrowFooter {
+  transform: rotate(180deg);
+}
+
+#footerDown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+#footerDown #logos {
+  display: flex;
+  gap: 5px;
+}
+
+#footerLogo {
+  height: 40px;
+}
+
+#solucao p,
+#solucao li {
+  color: #757575;
+  font-weight: bold;
+}
+
+.subtitleSolucao,
+#solucaoTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#equipe {
+  max-width: 1300px;
+}
+
+#cardsBenefits .cards .cardImage {
+  height: 50px;
+}
+
+.h2.titles {
+  color: #9333EA;
+}
+
+#span {
+  color: #9333EA;
+}
+
+
+#valoresLogan,
+#sobreALogan {
+  color: #ffffff;
+}
+
+#valoresLogan h2,
+#valoresLogan p,
+#sobreALogan h2,
+#sobreALogan p {
+  color: #ffffff;
+}
